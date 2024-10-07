@@ -1,76 +1,68 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #0056b3; /* צבע ברקע הכותרת */
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
 }
 
-header h1 {
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+h1 {
     margin: 0;
+    font-size: 24px;
 }
 
-header h2 {
+h2 {
     margin: 5px 0;
+    font-size: 18px;
 }
 
-nav {
-    background-color: #007bff; /* צבע ברקע של התפריט */
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: -300px; /* תפריט מחוץ למסך */
+.side-menu {
     height: 100%;
-    width: 300px;
-    transition: left 0.3s ease;
+    width: 250px; /* Width of the side menu */
+    position: fixed; /* Sit on top of the content */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: -250px; /* Hide by default */
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* Transition for opening */
+    padding-top: 60px; /* Padding for the menu items */
 }
 
-nav.open {
-    left: 0; /* תפריט פתוח */
+.side-menu a {
+    padding: 8px 8px 8px 32px; /* Padding for menu items */
+    text-decoration: none; /* No underline */
+    font-size: 25px; /* Font size */
+    color: #818181; /* Color */
+    display: block; /* Make links block elements */
+    transition: 0.3s; /* Transition for hover effect */
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    padding: 10px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+.side-menu a:hover {
+    color: #f1f1f1; /* Change color on hover */
 }
 
 .main-content {
-    padding: 20px;
-    margin-left: 20px; /* מרווח מהתפריט */
+    transition: margin-left 0.5s; /* Transition for content moving */
+    padding: 20px; /* Padding for main content */
+    margin-left: 0; /* No margin by default */
 }
 
-footer {
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.footer {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Padding for footer */
 }
