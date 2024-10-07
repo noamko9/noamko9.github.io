@@ -8,22 +8,21 @@
 </head>
 <body>
     <header>
+        <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span> <!-- כפתור התפריט בצורת המבורגר -->
         <h1>NNAccel</h1>
         <h2>Introduction</h2>
     </header>
 
-    <aside>
-        <nav>
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="installation.html">Installation</a></li>
-                <li><a href="project_build.html">Project Build</a></li>
-            </ul>
-        </nav>
-    </aside>
+    <nav id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <ul>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="installation.html">Installation</a></li>
+            <li><a href="project_build.html">Project Build</a></li>
+        </ul>
+    </nav>
 
-    <main>
+    <div id="main-content" class="main-content">
         <h2>Background</h2>
         <p>This project is based on the work of Erez Manor and Shlomo Greenberg. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9825651" target="_blank">Read the original paper here</a>.</p>
         <p>The AI world is advancing quickly and is being used in various applications to enhance and speed up computing tasks.</p>
@@ -33,7 +32,7 @@
 
         <h2>Results</h2>
         <p>Results from our experiments show a significant improvement in performance—724 times faster—compared to traditional software implementations. For instance, the classification of CIFAR-10 images was reduced from 20 seconds to 37 milliseconds.</p>
-    </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 NNAccel Project</p>
