@@ -6,7 +6,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
+    display: flex;
 }
 
 header {
@@ -14,104 +15,62 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-}
-
-/* Sidebar styles */
-#sidebar {
-    height: 100%;
-    width: 0;
+    width: 100%;
     position: fixed;
-    z-index: 1;
     top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
 }
 
-#sidebar a {
-    padding: 10px 15px;
+aside {
+    width: 250px;
+    padding-top: 80px; /* התאמה ל-header */
+    background-color: #f8f9fa;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border-right: 1px solid #ddd;
+}
+
+aside nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav ul li {
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+aside nav ul li a {
+    color: #007bff;
     text-decoration: none;
-    font-size: 22px;
-    color: white;
-    display: block;
-    transition: 0.3s;
 }
 
-#sidebar a:hover {
-    background-color: #555;
+aside nav ul li a:hover {
+    text-decoration: underline;
 }
 
-#sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#menu-btn {
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    background-color: #333;
-    border: none;
-    margin-left: 20px;
+aside nav ul li ul {
+    list-style-type: none;
+    padding-left: 20px;
 }
 
 main {
+    margin-left: 260px;
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-section {
-    background-color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin: 20px 0;
+    padding-top: 100px; /* התאמה ל-header */
+    background-color: #fff;
+    width: calc(100% - 260px);
+    height: 100vh;
+    overflow-y: auto;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
+    padding: 10px;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    margin-top: 20px;
 }
