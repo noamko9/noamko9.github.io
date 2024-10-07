@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,64 +10,67 @@ body {
 }
 
 header {
-    background-color: #0056b3;
+    background-color: #0056b3; /* צבע ברקע הכותרת */
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
-.menu-toggle {
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    padding: 15px;
+header h1 {
+    margin: 0;
 }
 
-.side-menu {
-    height: 100%; 
-    width: 0; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
-    left: 0;
-    background-color: #0056b3; 
-    overflow-x: hidden; 
-    transition: 0.5s; 
-    padding-top: 60px; 
+header h2 {
+    margin: 5px 0;
 }
 
-.side-menu a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.side-menu a:hover {
-    background-color: #007bff;
-}
-
-.side-menu .closebtn {
-    position: absolute;
+nav {
+    background-color: #007bff; /* צבע ברקע של התפריט */
+    padding: 10px 0;
+    position: fixed;
     top: 0;
-    right: 25px;
-    font-size: 36px;
+    left: -300px; /* תפריט מחוץ למסך */
+    height: 100%;
+    width: 300px;
+    transition: left 0.3s ease;
+}
+
+nav.open {
+    left: 0; /* תפריט פתוח */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 .main-content {
-    margin-left: 20px; /* מרווח מהצד */
     padding: 20px;
+    margin-left: 20px; /* מרווח מהתפריט */
 }
 
 footer {
-    text-align: center;
-    padding: 15px;
     background-color: #0056b3;
     color: white;
-}
-
-.side-menu.open {
-    width: 250px; /* רוחב התפריט כשהוא פתוח */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
