@@ -3,38 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction</title>
+    <title>NNAccel - Introduction</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <span id="menu-btn" onclick="openNav()">&#9776;</span>
-        <h1>Introduction</h1>
+        <h1>NNAccel</h1>
     </header>
 
-    <div id="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="installation.html">Installation</a>
-        <a href="project_build.html">Project Build</a>
-    </div>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">1. Download Xilinx</a></li>
+                <li><a href="bdf.html">2. BDF</a></li>
+                <li><a href="install_ros.html">3. Install ROS</a></li>
+                <li>4. Hello World
+                    <ul>
+                        <li><a href="hello_microblaze.html">4.1 Hello Microblaze</a></li>
+                        <li><a href="hello_ros.html">4.2 Hello ROS</a></li>
+                    </ul>
+                </li>
+                <li><a href="add_uart.html">5. Add UART</a></li>
+                <li><a href="ros_project.html">6. ROS Project in Vitis</a></li>
+                <li><a href="gpio.html">7. GPIO & Interrupts</a></li>
+                <li><a href="code_overview.html">8. Code Overview</a></li>
+                <li><a href="running_everything.html">9. Running Everything</a></li>
+                <li><a href="image_pipeline.html">10. Image Pipeline</a></li>
+                <li><a href="files.html">11. Files</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <main>
-        <section>
-            <h2>Background</h2>
-            <p>Based on the paper by Erez Manor and Shlomo Greenberg. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9825651" target="_blank">Link to Paper</a>.</p>
-            <p>The AI world is developing rapidly and is used, among other things, to improve and accelerate computers.</p>
+        <h2>Background</h2>
+        <p>Based on the paper by Erez Manor and Shlomo Greenberg. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9825651" target="_blank">Link to Paper</a>.</p>
+        <p>The AI world is developing rapidly and is used, among other things, to improve and accelerate computers.</p>
 
-            <h2>Objective</h2>
-            <p>We aim to accelerate IoT devices with limited resources using neural networks. The demonstration uses Ultra96-V2.</p>
+        <h2>Objective</h2>
+        <p>We aim to accelerate IoT devices with limited resources using neural networks. The demonstration uses Ultra96-V2.</p>
 
-            <h2>Results</h2>
-            <p>Experimental results show a 724x performance improvement compared to software-only implementations. For example, CIFAR-10 image classification time decreased from 20 seconds to 37 milliseconds.</p>
-        </section>
+        <h2>Results</h2>
+        <p>Experimental results show a 724x performance improvement compared to software-only implementations. For example, CIFAR-10 image classification time decreased from 20 seconds to 37 milliseconds.</p>
     </main>
 
     <footer>
-        <p>&copy; 2024 LSTM Accelerator Project</p>
+        <p>&copy; 2024 NNAccel Project</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
