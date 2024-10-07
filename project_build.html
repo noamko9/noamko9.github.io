@@ -9,35 +9,38 @@
 <body>
     <header>
         <h1>NNAccel</h1>
+        <h2>Project Build</h2>
     </header>
 
     <aside>
         <nav>
+            <h3>Menu</h3>
             <ul>
                 <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="installation.html">1. Download Xilinx</a></li>
-                <li><a href="bdf.html">2. BDF</a></li>
-                <li><a href="install_ros.html">3. Install ROS</a></li>
-                <li>4. Hello World
-                    <ul>
-                        <li><a href="hello_microblaze.html">4.1 Hello Microblaze</a></li>
-                        <li><a href="hello_ros.html">4.2 Hello ROS</a></li>
-                    </ul>
-                </li>
-                <li><a href="add_uart.html">5. Add UART</a></li>
-                <li><a href="ros_project.html">6. ROS Project in Vitis</a></li>
-                <li><a href="gpio.html">7. GPIO & Interrupts</a></li>
-                <li><a href="code_overview.html">8. Code Overview</a></li>
-                <li><a href="running_everything.html">9. Running Everything</a></li>
-                <li><a href="image_pipeline.html">10. Image Pipeline</a></li>
-                <li><a href="files.html">11. Files</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="project_build.html">Project Build</a></li>
             </ul>
         </nav>
     </aside>
 
     <main>
-        <h2>Project Build</h2>
-        <p>Details about how to build the project will go here.</p>
+        <h2>Rebuilding the Project</h2>
+        <p>Start by building the project in HLS:</p>
+        <ul>
+            <li>Open Vitis HLS cmd and run pre-prepared scripts to rebuild the accelerator according to the README file in the folder.</li>
+            <li>A folder named LSTMAccel will be created. It can also be found on GitHub for process simplification, but it can be built manually.</li>
+            <li>The LSTMAccel folder is also saved in ../../vivado_project/proj_ips/ip.</li>
+        </ul>
+
+        <h2>Using Vivado</h2>
+        <ul>
+            <li>Open Vivado software and navigate to vivado_project.</li>
+            <li>Open the recreate_tflm_vivado project and click "Generate Bitstream".</li>
+            <li>The result is a file with the .xsa extension.</li>
+        </ul>
+
+        <h2>Final Step in Vitis</h2>
+        <p>Select the folder ..\NNAccel-main\Vitis\vitis_workspace as input. Run create_platform.tcl to create the platform. Then, you can rebuild the applications using the remaining scripts.</p>
     </main>
 
     <footer>
