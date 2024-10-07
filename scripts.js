@@ -1,12 +1,13 @@
-// JavaScript code for handling menu toggle, if necessary
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.createElement('button');
+    menuToggle.textContent = 'Toggle Menu';
+    menuToggle.style.position = 'fixed';
+    menuToggle.style.top = '10px';
+    menuToggle.style.left = '220px';
+    document.body.appendChild(menuToggle);
 
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle'); // If you plan to add a toggle button
-    const nav = document.querySelector('aside nav');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function () {
-            nav.classList.toggle('active');
-        });
-    }
+    menuToggle.addEventListener('click', function() {
+        const aside = document.querySelector('aside');
+        aside.style.display = aside.style.display === 'none' ? 'block' : 'none';
+    });
 });
