@@ -8,25 +8,24 @@
 </head>
 <body>
     <header>
+        <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span> <!-- כפתור תפריט המבורגר -->
         <h1>NNAccel</h1>
         <h2>Welcome</h2>
     </header>
 
-    <aside>
-        <nav>
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="installation.html">Installation</a></li>
-                <li><a href="project_build.html">Project Build</a></li>
-            </ul>
-        </nav>
-    </aside>
+    <nav id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <ul>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="installation.html">Installation</a></li>
+            <li><a href="project_build.html">Project Build</a></li>
+        </ul>
+    </nav>
 
-    <main>
+    <div id="main-content" class="main-content">
         <h2>Welcome to the NNAccel Project Guide</h2>
-        <p>This website provides a detailed guide on how to set up and use the NNAccel project.</p>
-    </main>
+        <p>This website provides a comprehensive guide on how to set up and use the NNAccel project. Use the menu to navigate between different sections of the guide.</p>
+    </div>
 
     <footer>
         <p>&copy; 2024 NNAccel Project</p>
