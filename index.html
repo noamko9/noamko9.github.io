@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Guide</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
 </head>
 <body>
     <header>
+        <span id="menu-btn" onclick="openNav()">&#9776;</span>
         <h1>Project Guide for LSTM Accelerator</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="introduction.html">Introduction</a></li>
-            <li>
-                <a href="#">Installation</a>
-                <ul>
-                    <li><a href="installation.html">Vivado Installation</a></li>
-                    <li><a href="vitis_installation.html">Vitis Installation</a></li>
-                </ul>
-            </li>
-            <li><a href="project_build.html">Project Build</a></li>
-        </ul>
-    </nav>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="installation.html">Installation</a>
+        <a href="project_build.html">Project Build</a>
+    </div>
 
     <main>
         <section>
