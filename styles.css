@@ -1,4 +1,24 @@
-/* תפריט צד מוסתר */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+}
+
 .side-menu {
     height: 100%; 
     width: 0; 
@@ -32,14 +52,18 @@
     font-size: 36px;
 }
 
-.menu-toggle {
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    padding: 15px;
+.main-content {
+    margin-left: 20px; /* מרווח מהצד */
+    padding: 20px;
 }
 
-/* פתיחה של התפריט */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0056b3;
+    color: white;
+}
+
 .side-menu.open {
     width: 250px; /* רוחב התפריט כשהוא פתוח */
 }
