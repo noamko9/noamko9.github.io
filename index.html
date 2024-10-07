@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Guide</title>
+    <title>NNAccel - Introduction</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function openNav() {
-            document.getElementById("sidebar").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("sidebar").style.width = "0";
-        }
-    </script>
 </head>
 <body>
     <header>
-        <span id="menu-btn" onclick="openNav()">&#9776;</span>
-        <h1>Project Guide for LSTM Accelerator</h1>
+        <h1>NNAccel</h1>
     </header>
 
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="installation.html">Installation</a>
-        <a href="project_build.html">Project Build</a>
-    </div>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">1. Download Xilinx</a></li>
+                <li><a href="bdf.html">2. BDF</a></li>
+                <li><a href="install_ros.html">3. Install ROS</a></li>
+                <li>4. Hello World
+                    <ul>
+                        <li><a href="hello_microblaze.html">4.1 Hello Microblaze</a></li>
+                        <li><a href="hello_ros.html">4.2 Hello ROS</a></li>
+                    </ul>
+                </li>
+                <li><a href="add_uart.html">5. Add UART</a></li>
+                <li><a href="ros_project.html">6. ROS Project in Vitis</a></li>
+                <li><a href="gpio.html">7. GPIO & Interrupts</a></li>
+                <li><a href="code_overview.html">8. Code Overview</a></li>
+                <li><a href="running_everything.html">9. Running Everything</a></li>
+                <li><a href="image_pipeline.html">10. Image Pipeline</a></li>
+                <li><a href="files.html">11. Files</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>This website provides a detailed guide on how to set up and use the LSTM accelerator project.</p>
-            <p>Use the menu to navigate between different sections of the guide.</p>
-        </section>
+        <h2>Introduction</h2>
+        <p>This page introduces the NNAccel project, providing an overview of the system architecture and initial setup instructions.</p>
     </main>
 
     <footer>
-        <p>&copy; 2024 LSTM Accelerator Project</p>
+        <p>&copy; 2024 NNAccel Project</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
