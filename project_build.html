@@ -8,46 +8,36 @@
 </head>
 <body>
     <header>
+        <span id="menu-btn" onclick="openNav()">&#9776;</span>
         <h1>Project Build</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="introduction.html">Introduction</a></li>
-            <li>
-                <a href="#">Installation</a>
-                <ul>
-                    <li><a href="installation.html">Vivado Installation</a></li>
-                    <li><a href="vitis_installation.html">Vitis Installation</a></li>
-                </ul>
-            </li>
-            <li><a href="project_build.html">Project Build</a></li>
-        </ul>
-    </nav>
+    <div id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="installation.html">Installation</a>
+        <a href="project_build.html">Project Build</a>
+    </div>
 
     <main>
         <section>
             <h2>Rebuilding the Project</h2>
             <p>Start by building the project in HLS:</p>
             <ul>
-                <li>Open `vitis HLS cmd` and run pre-prepared scripts to rebuild the accelerator according to the README file in the folder.</li>
-                <li>A folder named `LSTMAccel` will be created. It can also be found on GitHub for process simplification, but it can be built manually.</li>
-                <li>The `LSTMAccel` folder is also saved in `../../vivado_project/proj_ips/ip`.</li>
+                <li>Open vitis HLS cmd and run pre-prepared scripts to rebuild the accelerator according to the README file in the folder.</li>
+                <li>A folder named LSTMAccel will be created. It can also be found on GitHub for process simplification, but it can be built manually.</li>
+                <li>The LSTMAccel folder is also saved in ../../vivado_project/proj_ips/ip.</li>
             </ul>
-        </section>
 
-        <section>
             <h2>Using Vivado</h2>
             <ul>
-                <li>Open Vivado software and navigate to `vivado_project`.</li>
-                <li>Open the `recreate_tflm_vivado` project and click "Generate Bitstream".</li>
-                <li>The result is a file with the `.xsa` extension.</li>
+                <li>Open Vivado software and navigate to vivado_project.</li>
+                <li>Open the recreate_tflm_vivado project and click "Generate Bitstream".</li>
+                <li>The result is a file with the .xsa extension.</li>
             </ul>
-        </section>
 
-        <section>
             <h2>Final Step in Vitis</h2>
-            <p>Select the folder `..\NNAccel-main\Vitis\vitis_workspace` as input. Run `create_platform.tcl` to create the platform. Then, you can rebuild the applications using the remaining scripts.</p>
+            <p>Select the folder ..\NNAccel-main\Vitis\vitis_workspace as input. Run create_platform.tcl to create the platform. Then, you can rebuild the applications using the remaining scripts.</p>
         </section>
     </main>
 
